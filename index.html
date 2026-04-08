@@ -17,7 +17,17 @@
                         <p class="main-description">The Redeemer</p>
                     </div>
                 </div>
-                <div class="item2 item"></div>
+                <div class="item2 item">
+                    <div class="carousel">
+                        <img src="images/senna1.jpg" class="slide active">
+                        <img src="images/senna2.jpg" class="slide">
+                        <img src="images/senna3.jpg" class="slide">
+
+                    </div>
+                    <div class="overlay">
+                        <h2 class="item-2-maintitle">SKINS</h2>
+                    </div>
+                </div>
 
             </div>
             <div class="left-bottom">
@@ -33,5 +43,15 @@
 
         </div>
     </div>
+    <script>
+const slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 3000);
+</script>
 </body>
 </html>
